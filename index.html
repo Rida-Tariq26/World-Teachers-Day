@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Tribute to Our Teachers | Y-5 (GIRLS) · Punjab College</title>
+
+  <!-- Open Graph / WhatsApp / Social Metadata -->
+  <meta property="og:title" content="Happy World Teachers’ Day — A Tribute from Y-5 (GIRLS)">
+  <meta property="og:description"
+    content="A personal, interactive digital tribute created by the students of Y-5 (GIRLS), Punjab College · Al-Rehman Garden Campus, honoring the dedication, standards, and quiet guidance of our teachers.">
+  <meta property="og:type" content="website">
+  <meta name="description"
+    content="A personal, interactive digital tribute created by the students of Y-5 (GIRLS), Punjab College · Al-Rehman Garden Campus, for World Teachers' Day.">
+  <meta name="theme-color" content="#1B2A6B">
+
+  <!-- Google Fonts: Montserrat (Headlines), Poppins (Body/Accents), Great Vibes (Subtle Script Accent) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS Custom Properties / Design Tokens
+       ========================================================================== */
+    :root {
+      /* Brand Palette */
+      --color-navy: #1B2A6B;
+      --color-navy-dark: #0F1A44;
+      --color-navy-deep: #09102E;
+      --color-red: #E31E24;
+      --color-red-glow: rgba(227, 30, 36, 0.45);
+      --color-red-light: #FF4D52;
+      --color-sky-light: #EBF3FF;
+      --color-sky-accent: #60A5FA;
+      --color-sky-glow: rgba(96, 165, 250, 0.25);
+      --color-gold: #F59E0B;
+      --color-white: #FFFFFF;
+      --color-text-muted: #CBD5E1;
+      --color-card-border: rgba(255, 255, 255, 0.15);
+      --color-card-bg: rgba(27, 42, 107, 0.55);
+      --color-card-back-bg: rgba(15, 26, 68, 0.88);
+
+      /* Typography */
+      --font-headline: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-script: 'Great Vibes', cursive;
+
+      /* Radii & Shadows */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.18);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.28);
+      --shadow-lg: 0 20px 50px rgba(11, 18, 52, 0.5);
+      --shadow-glow: 0 0 35px rgba(96, 165, 250, 0.22);
+
+      /* Layout */
+      --container-max: 860px;
+    }
+
+    /* ==========================================================================
+       Reset & Base Styles
+       ========================================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      color-scheme: dark;
+      scroll-behavior: smooth;
+      background-color: var(--color-navy-deep);
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-white);
+      background: radial-gradient(circle at 50% 0%, #2A3F9D 0%, var(--color-navy) 40%, var(--color-navy-deep) 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient atmospheric background lighting */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 25%, var(--color-sky-glow) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(227, 30, 36, 0.12) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Subtle geometric sparkle stars */
+    .bg-decorations {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .sparkle {
+      position: absolute;
+      opacity: 0.35;
+      fill: var(--color-sky-light);
+      animation: float-sparkle 6s ease-in-out infinite alternate;
+    }
+
+    .sparkle:nth-child(1) {
+      top: 12%;
+      left: 8%;
+      width: 14px;
+      animation-duration: 7s;
+    }
+
+    .sparkle:nth-child(2) {
+      top: 22%;
+      right: 10%;
+      width: 18px;
+      animation-duration: 8s;
+      animation-delay: 1s;
+    }
+
+    .sparkle:nth-child(3) {
+      bottom: 25%;
+      left: 12%;
+      width: 16px;
+      animation-duration: 6.5s;
+      animation-delay: 2s;
+    }
+
+    .sparkle:nth-child(4) {
+      bottom: 15%;
+      right: 14%;
+      width: 12px;
+      animation-duration: 9s;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes float-sparkle {
+      0% {
+        transform: translateY(0) scale(0.9);
+        opacity: 0.2;
+      }
+
+      50% {
+        opacity: 0.55;
+      }
+
+      100% {
+        transform: translateY(-12px) scale(1.1);
+        opacity: 0.25;
+      }
+    }
+
+    /* Confetti Canvas */
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* ==========================================================================
+       Accessibility & Utility
+       ========================================================================== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-red-light);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       Gate Screen (Opening View)
+       ========================================================================== */
+    .gate-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      background: radial-gradient(circle at 50% 20%, #25398C 0%, var(--color-navy-dark) 65%, var(--color-navy-deep) 100%);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gate-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.96);
+      visibility: hidden;
+    }
+
+    .gate-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--color-card-border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 1.75rem;
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gate-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-sky-accent), var(--color-red), var(--color-sky-accent));
+    }
+
+    .campus-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--color-sky-light);
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .campus-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      box-shadow: 0 0 8px var(--color-red);
+    }
+
+    .script-accent {
+      font-family: var(--font-script);
+      font-size: 2.25rem;
+      color: var(--color-sky-accent);
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.35rem;
+      font-weight: 400;
+    }
+
+    .gate-title {
+      font-family: var(--font-headline);
+      font-size: 2.1rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #FFFFFF 30%, #D8E5FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gate-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+      padding: 0 0.5rem;
+    }
+
+    .gate-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .input-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--color-sky-light);
+      text-transform: uppercase;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .name-input {
+      width: 100%;
+      min-height: 48px;
+      padding: 0.75rem 1rem;
+      background: rgba(15, 26, 68, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
+    }
+
+    .name-input:focus {
+      outline: none;
+      border-color: var(--color-sky-accent);
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+      background: rgba(15, 26, 68, 0.95);
+    }
+
+    .name-input::placeholder {
+      color: rgba(203, 213, 225, 0.45);
+      font-weight: 400;
+    }
+
+    .input-hint {
+      font-size: 0.72rem;
+      color: rgba(203, 213, 225, 0.7);
+      margin-top: 0.15rem;
+    }
+
+    .btn-gate-open {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.75rem;
+      background: linear-gradient(135deg, var(--color-red) 0%, #C41217 100%);
+      color: var(--color-white);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-headline);
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 6px 20px var(--color-red-glow);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .btn-gate-open:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(227, 30, 36, 0.55);
+      filter: brightness(1.08);
+    }
+
+    .btn-gate-open:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 12px var(--color-red-glow);
+    }
+
+    .btn-icon {
+      transition: transform 0.25s ease;
+    }
+
+    .btn-gate-open:hover .btn-icon {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       Main Card Container
+       ========================================================================== */
+    .main-container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .main-container.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header Section */
+    .tribute-header {
+      text-align: center;
+      margin-bottom: 2.75rem;
+      position: relative;
+    }
+
+    .header-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--color-sky-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .header-tag span.badge-class {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .salutation {
+      font-family: var(--font-headline);
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--color-white);
+      word-break: break-word;
+    }
+
+    .salutation span.recipient-highlight {
+      background: linear-gradient(135deg, #FFFFFF 40%, var(--color-sky-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 2px solid var(--color-red);
+      padding-bottom: 2px;
+    }
+
+    .opening-message {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #E2E8F0;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    /* Instruction / Progress Indicator */
+    .interaction-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1.15rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-md);
+    }
+
+    .instruction-text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+
+    .instruction-text svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--color-sky-accent);
+      flex-shrink: 0;
+    }
+
+    .progress-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--color-sky-light);
+      background: rgba(96, 165, 250, 0.15);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+    }
+
+    /* ==========================================================================
+       Five Interactive Flip Cards Grid
+       ========================================================================== */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-item:nth-child(5) {
+        grid-column: span 2;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 860px) {
+      .cards-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .card-item:nth-child(1),
+      .card-item:nth-child(2),
+      .card-item:nth-child(3) {
+        grid-column: span 2;
+      }
+
+      .card-item:nth-child(4),
+      .card-item:nth-child(5) {
+        grid-column: span 3;
+      }
+    }
+
+    /* 3D Flip Card Container */
+    .card-item {
+      perspective: 1200px;
+      min-height: 220px;
+    }
+
+    .card-flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      border-radius: var(--radius-lg);
+      transform-style: preserve-3d;
+      transition: transform 0.65s cubic-bezier(0.2, 0.85, 0.4, 1.15), box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .card-flipper:hover {
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35), 0 0 20px rgba(96, 165, 250, 0.15);
+    }
+
+    .card-flipper.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Front and Back Face Shared Styles */
+    .card-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--color-card-border);
+      overflow: hidden;
+    }
+
+    /* Front Face */
+    .card-front {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(27, 42, 107, 0.65) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-front::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+
+    .card-num {
+      font-family: var(--font-headline);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--color-red);
+      background: rgba(227, 30, 36, 0.12);
+      border: 1px solid rgba(227, 30, 36, 0.25);
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+    }
+
+    .card-icon {
+      width: 22px;
+      height: 22px;
+      opacity: 0.8;
+      fill: var(--color-sky-accent);
+    }
+
+    .card-front-content {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .card-title {
+      font-family: var(--font-headline);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--color-white);
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-theme {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .card-flip-prompt {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-sky-accent);
+      letter-spacing: 0.03em;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+
+    .card-flip-prompt svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+
+    .card-flipper:hover .card-flip-prompt svg {
+      transform: rotate(45deg);
+    }
+
+    /* Back Face */
+    .card-back {
+      background: linear-gradient(145deg, #132258 0%, var(--color-navy-dark) 100%);
+      border-color: rgba(96, 165, 250, 0.35);
+      transform: rotateY(180deg);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .card-back::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-red), var(--color-sky-accent));
+    }
+
+    .card-back-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-back-title {
+      font-family: var(--font-headline);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-sky-accent);
+    }
+
+    .card-return-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(203, 213, 225, 0.75);
+    }
+
+    .card-return-indicator svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .card-back-body {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .card-back-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #F8FAFC;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .card-back-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(203, 213, 225, 0.6);
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ==========================================================================
+       Closing & Signature Section
+       ========================================================================== */
+    .closing-section {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(15, 26, 68, 0.75) 100%);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .closing-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-red), transparent);
+    }
+
+    .closing-quote-mark {
+      font-family: var(--font-headline);
+      font-size: 3rem;
+      line-height: 1;
+      color: rgba(96, 165, 250, 0.2);
+      margin-bottom: -0.5rem;
+      user-select: none;
+    }
+
+    .closing-message {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #E2E8F0;
+      font-weight: 400;
+    }
+
+    .signature-block {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 1.25rem 2rem;
+      border-radius: var(--radius-md);
+      background: rgba(27, 42, 107, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .signature-pre {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-sky-light);
+      letter-spacing: 0.04em;
+    }
+
+    .signature-name {
+      font-family: var(--font-headline);
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #FFFFFF 0%, #DCE8FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .signature-campus {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      letter-spacing: 0.03em;
+    }
+
+    /* Action bar: Share / Reset */
+    .action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn-secondary {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      background: #111B45;
+      color: #FFFFFF;
+      border: 1px solid var(--color-sky-accent);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ==========================================================================
+       Footer Section
+       ========================================================================== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 0.8rem;
+      color: rgba(203, 213, 225, 0.65);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      max-width: var(--container-max);
+      margin: 0 auto;
+    }
+
+    .footer-title {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--color-sky-light);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .footer-sub {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       Prefers Reduced Motion Media Query
+       ========================================================================== */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .card-flipper {
+        transition: none !important;
+      }
+
+      .card-flipper.is-flipped {
+        transform: none !important;
+      }
+
+      .card-flipper.is-flipped .card-front {
+        display: none !important;
+      }
+
+      .card-flipper.is-flipped .card-back {
+        transform: none !important;
+        display: flex !important;
+      }
+
+      .sparkle {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Ambient decorative SVGs -->
+  <div class="bg-decorations" aria-hidden="true">
+    <svg class="sparkle" viewBox="0 0 24 24">
+      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" />
+    </svg>
+    <svg class="sparkle" viewBox="0 0 24 24">
+      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" />
+    </svg>
+    <svg class="sparkle" viewBox="0 0 24 24">
+      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" />
+    </svg>
+    <svg class="sparkle" viewBox="0 0 24 24">
+      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" />
+    </svg>
+  </div>
+
+  <!-- Lightweight canvas for celebratory confetti burst -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       GATE SCREEN
+       ========================================================================== -->
+  <section class="gate-overlay" id="gateOverlay" aria-modal="true" role="dialog" aria-labelledby="gateTitle">
+    <div class="gate-card">
+
+      <div class="campus-badge">
+        <span class="campus-badge-dot" aria-hidden="true"></span>
+        <span id="gateBadge">Y-5 (GIRLS) · Punjab College · Al-Rehman Garden Campus</span>
+      </div>
+
+      <span class="script-accent" aria-hidden="true">October 5 Tribute</span>
+      <h1 class="gate-title" id="gateTitle">Happy Teacher's Day</h1>
+      <p class="gate-subtitle" id="gateSubtitle">A digital tribute dedicated to the mentors who hold us to higher
+        standards and give us the confidence to meet them.</p>
+
+      <form class="gate-form" id="gateForm" onsubmit="event.preventDefault(); handleOpenCard();">
+        <div class="input-group">
+          <label for="teacherNameInput" class="input-label">Teacher's Name</label>
+          <div class="input-wrapper">
+            <input type="text" id="teacherNameInput" class="name-input" placeholder="Prof. " maxlength="40"
+              autocomplete="name" spellcheck="false" aria-describedby="nameInputHint">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-gate-open" id="btnGateOpen">
+          <span>Open Card</span>
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN CARD EXPERIENCE
+       ========================================================================== -->
+  <main class="main-container" id="mainContainer" aria-live="polite">
+
+    <!-- Header & Personalized Greeting -->
+    <header class="tribute-header">
+      <div class="header-tag">
+        <span class="badge-class">Y-5 (GIRLS)</span>
+        <span aria-hidden="true">·</span>
+        <span>Punjab College · Al-Rehman Garden Campus</span>
+      </div>
+
+      <h2 class="salutation" id="salutationHeader">
+        Dear <span class="recipient-highlight" id="recipientName">Teacher</span>,
+      </h2>
+
+      <p class="opening-message" id="openingMessage">
+        A textbook can outline facts, but it takes a dedicated teacher to build the composure, intellectual honesty, and
+        courage to solve problems independently. Thank you for treating our daily lectures not as a mechanical routine,
+        but as a genuine investment in our growth.
+      </p>
+    </header>
+
+    <!-- Interaction Status & Counter -->
+    <div class="interaction-status">
+      <div class="instruction-text">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2v-2zm0-10h2v8h-2V6z" />
+        </svg>
+        <span>Tap any card to turn it over and read our note</span>
+      </div>
+      <div class="progress-pill" id="cardProgress">Cards explored: 0 / 5</div>
+    </div>
+
+    <!-- The 5 Interactive Flip Cards -->
+    <section class="cards-grid" id="cardsGrid" aria-label="Five reflections from Y-5 (GIRLS) on teaching">
+      <!-- Injected dynamically from copy structure to ensure pristine state and easy editing -->
+    </section>
+
+    <!-- Closing Section -->
+    <section class="closing-section" aria-label="Closing message from the class">
+      <div class="closing-quote-mark" aria-hidden="true">“</div>
+      <p class="closing-message" id="closingMessage">
+        Long after our examination halls empty and this academic term concludes, what endures is not the notes on a
+        whiteboard, but the quiet pride of being taught with care and held to high expectations.
+      </p>
+
+      <div class="signature-block">
+        <span class="signature-pre">With gratitude,</span>
+        <span class="signature-name">Y-5 (GIRLS)</span>
+        <span class="signature-campus">Punjab College · Al-Rehman Garden Campus</span>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-title">Happy World Teachers’ Day</div>
+      <div class="footer-sub">Punjab College · Al-Rehman Garden Campus · October 5</div>
+    </footer>
+
+  </main>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC & EDITABLE COPY STRUCTURE
+       ========================================================================== -->
+  <script>
+    /**
+     * CENTRALIZED EDITABLE COPY OBJECT
+     * 
+     * All messages are thoughtfully crafted to avoid clichés like
+     * "You shape our future" or "You inspire us every day".
+     * Alternative lines are included as comments for simple future customization.
+     */
+    const copy = {
+      gate: {
+        badge: "Y-5 (GIRLS) · Punjab College · Al-Rehman Garden Campus",
+        title: "Happy Teacher's Day",
+        subtitle: "A digital tribute dedicated to the mentors who hold us to higher standards and give us the confidence to meet them.",
+        /* ALTERNATIVE GATE SUBTITLES:
+         * Alt 1: "For the mentors who demand rigor in every lesson, and never let us settle for half-understanding."
+         * Alt 2: "A tribute from our classroom to the teachers who make challenging subjects feel conquerable."
+         */
+        inputPlaceholder: "Prof. ",
+        inputLabel: "Teacher's Name",
+        buttonText: "Open Card"
+      },
+
+      greeting: {
+        salutationPrefix: "Dear",
+        defaultName: "Teacher",
+        openingMessage: "A textbook can outline facts, but it takes a dedicated teacher to build the composure, intellectual honesty, and courage to solve problems independently. Thank you for treating our daily lectures not as a mechanical routine, but as a genuine investment in our growth."
+        /* ALTERNATIVE OPENING MESSAGES:
+         * Alt 1: "Syllabi can be completed anywhere, but the clarity, patience, and dignity you bring into our lecture room cannot be replicated by notes. Thank you for making our education feel intentional."
+         * Alt 2: "Beyond preparing us for board exams, you taught us how to organize our thinking and persist through difficult concepts. We are deeply grateful for your dedication."
+         */
+      },
+
+      cards: [
+        {
+          id: 1,
+          number: "01",
+          concept: "Intellectual Rigor",
+          frontTitle: "Beyond Memorization",
+          theme: "Learning how to reason",
+          icon: `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>`,
+          backTitle: "The Discipline of Reason",
+          backBody: "You never let us settle for rehearsed answers. You taught us to dissect the problem, test the premises, and trust our own logic before accepting a conclusion.",
+          footerNote: "Taught by your example"
+          /* ALTERNATIVE BACK LINES:
+           * Alt 1: "You shifted our focus from memorizing answers for exams to understanding why principles work in the first place."
+           * Alt 2: "You gave us the patience to sit with difficult questions until clarity replaced confusion."
+           */
+        },
+        {
+          id: 2,
+          number: "02",
+          concept: "Voice & Confidence",
+          frontTitle: "The Room to Ask",
+          theme: "Freedom from hesitation",
+          icon: `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>`,
+          backTitle: "A Patient Classroom",
+          backBody: "In your presence, an uncertain question was never met with frustration. You gave us the quiet assurance that curiosity is never foolish and always worth pursuing.",
+          footerNote: "Every question mattered"
+          /* ALTERNATIVE BACK LINES:
+           * Alt 1: "You made our lecture hall a place where admitting we did not know was the start of learning, not a reason for embarrassment."
+           * Alt 2: "Your willingness to explain twice without condescension built more confidence than any score on a test."
+           */
+        },
+        {
+          id: 3,
+          number: "03",
+          concept: "Correction with Dignity",
+          frontTitle: "Firmness with Grace",
+          theme: "High standards, zero belittling",
+          icon: `<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`,
+          backTitle: "Constructive Expectation",
+          backBody: "You pointed out where our work fell short without ever diminishing our dignity. Your corrections were never reprimands; they were blueprints for doing better.",
+          footerNote: "Accountability without fear"
+          /* ALTERNATIVE BACK LINES:
+           * Alt 1: "You refused to lower the bar for us, but you always showed us exactly how to climb to it."
+           * Alt 2: "Being corrected by someone who genuinely wants you to succeed is one of the greatest privileges a student can have."
+           */
+        },
+        {
+          id: 4,
+          number: "04",
+          concept: "Consistency & Demeanor",
+          frontTitle: "The Unseen Habit",
+          theme: "Consistency in preparation",
+          icon: `<svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>`,
+          backTitle: "Professional Composure",
+          backBody: "Day after day, your steady preparation and punctuality demonstrated that excellence is not an occasional burst of effort, but a daily habit of self-respect.",
+          footerNote: "Integrity in action"
+          /* ALTERNATIVE BACK LINES:
+           * Alt 1: "Long after formulas fade, the benchmark you set through your daily conduct remains our standard of professionalism."
+           * Alt 2: "You showed us that respecting one's subject and respecting one's students look exactly the same in practice."
+           */
+        },
+        {
+          id: 5,
+          number: "05",
+          concept: "Enduring Legacy",
+          frontTitle: "What Stays Behind",
+          theme: "Beyond the final bell",
+          icon: `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`,
+          backTitle: "Lasting Imprint",
+          backBody: "When this session ends and new batches take our seats, what we take with us is the quiet pride of knowing that someone expected something worthwhile from us.",
+          footerNote: "Carried forward into our future"
+          /* ALTERNATIVE BACK LINES:
+           * Alt 1: "A teacher's true legacy isn't written on attendance registers; it's carried quietly into the ambitions of the students who listened."
+           * Alt 2: "Thank you for giving Y-5 standards we will carry into university, career, and life."
+           */
+        }
+      ],
+
+      closing: {
+        quote: "Long after our examination halls empty and this academic term concludes, what endures is not the notes on a whiteboard, but the quiet pride of being taught with care and held to high expectations.",
+        /* ALTERNATIVE CLOSING QUOTES:
+         * Alt 1: "Every student hopes for mentors who treat education as a partnership rather than an obligation. In your lectures, we found exactly that."
+         * Alt 2: "We entered your classroom to complete a syllabus; we leave with better minds, stronger habits, and deep respect for your work."
+         */
+        signaturePre: "With gratitude,",
+        signatureName: "Y-5 (GIRLS)",
+        signatureCampus: "Punjab College · Al-Rehman Garden Campus",
+        footerTitle: "Happy World Teachers’ Day",
+        footerSub: "Punjab College · Al-Rehman Garden Campus · October 5 2026"
+      }
+    };
+
+    /* State variables */
+    let currentTeacherName = "";
+    const flippedCardIds = new Set();
+
+    /* DOM References */
+    const gateOverlay = document.getElementById("gateOverlay");
+    const mainContainer = document.getElementById("mainContainer");
+    const teacherNameInput = document.getElementById("teacherNameInput");
+    const salutationHeader = document.getElementById("salutationHeader");
+    const recipientName = document.getElementById("recipientName");
+    const cardsGrid = document.getElementById("cardsGrid");
+    const cardProgress = document.getElementById("cardProgress");
+
+    /**
+     * Sanitize input strings for safe rendering via textContent.
+     * Trims leading/trailing whitespace and limits length.
+     */
+    function sanitizeInput(raw) {
+      if (!raw) return "";
+      return String(raw).trim().substring(0, 40);
+    }
+
+    /**
+     * Check URL query parameters for ?to=Name
+     */
+    function initUrlParams() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const nameFromUrl = urlParams.get("to") || urlParams.get("name") || urlParams.get("teacher");
+        if (nameFromUrl) {
+          const sanitized = sanitizeInput(nameFromUrl);
+          if (sanitized) {
+            teacherNameInput.value = sanitized;
+          }
+        }
+      } catch (err) {
+        console.warn("URLSearchParams not available or error parsing URL:", err);
+      }
+    }
+
+    /**
+     * Render the 5 Flip Cards from the copy object
+     */
+    function renderCards() {
+      cardsGrid.innerHTML = "";
+      copy.cards.forEach((card) => {
+        const cardItem = document.createElement("div");
+        cardItem.className = "card-item";
+
+        const flipper = document.createElement("div");
+        flipper.className = "card-flipper";
+        flipper.id = `cardFlipper-${card.id}`;
+        flipper.setAttribute("role", "button");
+        flipper.setAttribute("tabindex", "0");
+        flipper.setAttribute("aria-expanded", "false");
+        flipper.setAttribute("aria-label", `Card ${card.number}: ${card.frontTitle}, ${card.theme}. Tap or press Space/Enter to read message.`);
+
+        // Front Face
+        const frontFace = document.createElement("div");
+        frontFace.className = "card-face card-front";
+        frontFace.innerHTML = `
+          <div class="card-meta">
+            <span class="card-num">${card.number}</span>
+            <div class="card-icon" aria-hidden="true">${card.icon}</div>
+          </div>
+          <div class="card-front-content">
+            <h3 class="card-title">${card.frontTitle}</h3>
+            <p class="card-theme">${card.theme}</p>
+          </div>
+          <div class="card-flip-prompt" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+            <span>Tap to read note</span>
+          </div>
+        `;
+
+        // Back Face
+        const backFace = document.createElement("div");
+        backFace.className = "card-face card-back";
+        backFace.innerHTML = `
+          <div class="card-back-header">
+            <span class="card-back-title">${card.backTitle}</span>
+            <span class="card-return-indicator" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8z"/></svg>
+              <span>Tap to return</span>
+            </span>
+          </div>
+          <div class="card-back-body">
+            <p class="card-back-text">${card.backBody}</p>
+          </div>
+          <div class="card-back-footer">
+            <span>${card.footerNote}</span>
+            <span>Y-5 (GIRLS)</span>
+          </div>
+        `;
+
+        flipper.appendChild(frontFace);
+        flipper.appendChild(backFace);
+
+        // Interaction handlers
+        flipper.addEventListener("click", () => handleCardFlip(card.id));
+        flipper.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleCardFlip(card.id);
+          }
+        });
+
+        cardItem.appendChild(flipper);
+        cardsGrid.appendChild(cardItem);
+      });
+    }
+
+    /**
+     * Flip card logic & progress calculation
+     */
+    function handleCardFlip(cardId) {
+      const flipper = document.getElementById(`cardFlipper-${cardId}`);
+      if (!flipper) return;
+
+      const isFlipped = flipper.classList.toggle("is-flipped");
+      flipper.setAttribute("aria-expanded", isFlipped ? "true" : "false");
+
+      if (isFlipped) {
+        flippedCardIds.add(cardId);
+      }
+
+      updateProgressCounter();
+    }
+
+    /**
+     * Update progress indicator "Cards explored: X / 5"
+     */
+    function updateProgressCounter() {
+      const count = flippedCardIds.size;
+      cardProgress.textContent = `Cards explored: ${count} / ${copy.cards.length}`;
+      if (count === copy.cards.length) {
+        cardProgress.style.backgroundColor = "rgba(227, 30, 36, 0.2)";
+        cardProgress.style.borderColor = "rgba(227, 30, 36, 0.4)";
+        cardProgress.style.color = "#FFFFFF";
+      }
+    }
+
+    /**
+     * Handle Opening of the Gate
+     */
+    function handleOpenCard() {
+      const rawInput = teacherNameInput.value;
+      const sanitized = sanitizeInput(rawInput);
+
+      // Safe rendering: NEVER use innerHTML for user inputs
+      if (sanitized.length > 0) {
+        currentTeacherName = sanitized;
+        // Check if prefix like Prof. or Sir or Ma'am is already included
+        const lower = sanitized.toLowerCase();
+        let displayGreeting = sanitized;
+        if (!lower.startsWith("prof") && !lower.startsWith("dr") && !lower.startsWith("sir") && !lower.startsWith("ma'am") && !lower.startsWith("madam")) {
+          displayGreeting = `Prof. ${sanitized}`;
+        }
+        recipientName.textContent = displayGreeting;
+      } else {
+        currentTeacherName = "";
+        recipientName.textContent = copy.greeting.defaultName;
+      }
+
+      // Hide gate with smooth fade
+      gateOverlay.classList.add("hidden");
+      gateOverlay.setAttribute("aria-hidden", "true");
+
+      // Reveal main container
+      mainContainer.classList.add("revealed");
+
+      // Trigger celebratory confetti burst
+      launchConfetti();
+
+      // Set focus to the salutation for accessible screen reader flow
+      setTimeout(() => {
+        salutationHeader.setAttribute("tabindex", "-1");
+        salutationHeader.focus();
+      }, 400);
+    }
+
+    /* ==========================================================================
+       LIGHTWEIGHT VANILLA CANVAS CONFETTI (100% Offline, Zero Dependency)
+       ========================================================================== */
+    function launchConfetti() {
+      // Respect prefers-reduced-motion
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+
+      const canvas = document.getElementById("confettiCanvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      const dpr = window.devicePixelRatio || 1;
+      let width = (canvas.width = window.innerWidth * dpr);
+      let height = (canvas.height = window.innerHeight * dpr);
+
+      // Distinct festive palette honoring the college colors: Red, Gold, Navy, Sky Blue, White
+      const colors = ["#E31E24", "#FF4D52", "#F59E0B", "#60A5FA", "#FFFFFF", "#3B82F6"];
+      const particleCount = window.innerWidth < 600 ? 55 : 95;
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: (window.innerWidth / 2 + (Math.random() - 0.5) * 200) * dpr,
+          y: (window.innerHeight * 0.45) * dpr,
+          vx: (Math.random() - 0.5) * 16 * dpr,
+          vy: (Math.random() * -18 - 4) * dpr,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          size: (Math.random() * 8 + 5) * dpr,
+          tilt: Math.random() * 10 - 10,
+          tiltAngleIncremental: (Math.random() * 0.08) + 0.04,
+          tiltAngle: 0,
+          opacity: 1,
+          shape: Math.random() > 0.4 ? "rect" : "circle"
+        });
+      }
+
+      let animationFrame;
+      const startTime = performance.now();
+      const duration = 2800; // ms
+
+      function render(time) {
+        const elapsed = time - startTime;
+        ctx.clearRect(0, 0, width, height);
+
+        let activeCount = 0;
+        const progress = Math.min(1, elapsed / duration);
+        const globalAlpha = progress > 0.7 ? 1 - (progress - 0.7) / 0.3 : 1;
+
+        particles.forEach((p) => {
+          p.tiltAngle += p.tiltAngleIncremental;
+          p.y += (p.vy + 4 * dpr) * 0.5;
+          p.x += p.vx * 0.8;
+          p.vx *= 0.98;
+          p.vy += 0.45 * dpr; // Gravity
+          p.tilt = Math.sin(p.tiltAngle) * 12;
+
+          if (p.y < height && globalAlpha > 0) {
+            activeCount++;
+            ctx.save();
+            ctx.globalAlpha = globalAlpha;
+            ctx.fillStyle = p.color;
+            ctx.beginPath();
+
+            if (p.shape === "rect") {
+              ctx.translate(p.x + p.tilt, p.y);
+              ctx.rotate(p.tiltAngle);
+              ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+            } else {
+              ctx.arc(p.x + p.tilt, p.y, p.size / 3, 0, Math.PI * 2);
+              ctx.fill();
+            }
+            ctx.restore();
+          }
+        });
+
+        if (activeCount > 0 && elapsed < duration) {
+          animationFrame = requestAnimationFrame(render);
+        } else {
+          ctx.clearRect(0, 0, width, height);
+          cancelAnimationFrame(animationFrame);
+        }
+      }
+
+      animationFrame = requestAnimationFrame(render);
+
+      // Handle window resize during confetti
+      window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth * dpr;
+        height = canvas.height = window.innerHeight * dpr;
+      }, { once: true });
+    }
+
+    /**
+     * Hydrate static copy directly from the copy object
+     * This guarantees that changing copy in JS updates the entire interface instantly.
+     */
+    function hydrateStaticCopy() {
+      const gateBadgeEl = document.getElementById("gateBadge");
+      if (gateBadgeEl) gateBadgeEl.textContent = copy.gate.badge;
+
+      const gateTitleEl = document.getElementById("gateTitle");
+      if (gateTitleEl) gateTitleEl.textContent = copy.gate.title;
+
+      const gateSubtitleEl = document.getElementById("gateSubtitle");
+      if (gateSubtitleEl) gateSubtitleEl.textContent = copy.gate.subtitle;
+
+      if (teacherNameInput) teacherNameInput.placeholder = copy.gate.inputPlaceholder;
+
+      const btnGateSpan = document.querySelector("#btnGateOpen span");
+      if (btnGateSpan) btnGateSpan.textContent = copy.gate.buttonText;
+
+      const openingMsgEl = document.getElementById("openingMessage");
+      if (openingMsgEl) openingMsgEl.textContent = copy.greeting.openingMessage;
+
+      const closingMsgEl = document.getElementById("closingMessage");
+      if (closingMsgEl) closingMsgEl.textContent = copy.closing.quote;
+
+      const sigPre = document.querySelector(".signature-pre");
+      if (sigPre) sigPre.textContent = copy.closing.signaturePre;
+
+      const sigName = document.querySelector(".signature-name");
+      if (sigName) sigName.textContent = copy.closing.signatureName;
+
+      const sigCampus = document.querySelector(".signature-campus");
+      if (sigCampus) sigCampus.textContent = copy.closing.signatureCampus;
+
+      const footerTitle = document.querySelector(".footer-title");
+      if (footerTitle) footerTitle.textContent = copy.closing.footerTitle;
+
+      const footerSub = document.querySelector(".footer-sub");
+      if (footerSub) footerSub.textContent = copy.closing.footerSub;
+    }
+
+    /* Initialize Application on DOMContentLoaded */
+    document.addEventListener("DOMContentLoaded", () => {
+      hydrateStaticCopy();
+      renderCards();
+      initUrlParams();
+    });
+  </script>
+</body>
+
+</html>
